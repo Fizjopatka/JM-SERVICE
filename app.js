@@ -23,17 +23,20 @@ function introAnimations() {
 
 function areYouView() {
     const IS_VIEW = localStorage.getItem('view');
+    
     if (IS_VIEW === null) {
+        const TIME_ENTRANCE = Date.now();
+
         $('.intro').css('display', 'flex');
         introAnimations();
-        const TIME_ENTRANCE = Date.now();
         localStorage.setItem('TimeEntrance', TIME_ENTRANCE);
     } else {
-        $('.intro').css('display', 'none');
         const TIME_NOW = Date.now();
         const TWELVE_HOURS_IN_MILLISEC = 43200000;
         const intTimeEntrance = parseInt(localStorage.getItem('TimeEntrance'));
         const timeAfter12h = intTimeEntrance + TWELVE_HOURS_IN_MILLISEC;
+
+        $('.intro').css('display', 'none');
         if(TIME_NOW > timeAfter12h) {
             localStorage.removeItem('view');
             areYouView();
@@ -46,6 +49,7 @@ function areYouView() {
 const TODAY= new Date();
 const DAY_OF_WEEK = TODAY.getDay();
 const HOUR_NOW = TODAY.getHours();
+
 $('.d'+ DAY_OF_WEEK).css('background-color', 'rgba(206, 29, 29, 0.6)');
 
 //HOURS-CONTAINER TITLE ATTRIBUTE
@@ -61,7 +65,7 @@ function normalDay(HOUR_NOW) {
         $('.hours-container-xs').attr('title', STILL_CLOSE_INFO);
         $('.hours-container').attr('title', STILL_CLOSE_INFO);
 
-    } else if (HOUR_NOW > 16 ) {
+    } else if (HOUR_NOW > 16) {
         $('.hours-container-xs').attr('title', ALREADY_CLOSE_INFO );
         $('.hours-container').attr('title', ALREADY_CLOSE_INFO );
 
@@ -76,7 +80,7 @@ function saturDay(HOUR_NOW) {
         $('.hours-container-xs').attr('title', STILL_CLOSE_INFO);
         $('.hours-container').attr('title', STILL_CLOSE_INFO);
 
-    } else if (HOUR_NOW > 13 ) {
+    } else if (HOUR_NOW > 13) {
         $('.hours-container-xs').attr('title', ALREADY_CLOSE_SATURDAY_INFO);
         $('.hours-container').attr('title', ALREADY_CLOSE_SATURDAY_INFO);
 
@@ -121,13 +125,13 @@ const op1xs = document.querySelector('#optionxs-1');
 const op2xs = document.querySelector('#optionxs-2');
 const op3xs = document.querySelector('#optionxs-3');
 
-logo.addEventListener('click', ()=> window.location.assign('index.html'));
-op1.addEventListener('click', ()=> window.location.assign('oferta.html'));
-op2.addEventListener('click', ()=> window.location.assign('lokalizacja.html'));
-op3.addEventListener('click', ()=> window.location.assign('kontakt.html'));
-op1xs.addEventListener('click', ()=> window.location.assign('oferta.html'));
-op2xs.addEventListener('click', ()=> window.location.assign('lokalizacja.html'));
-op3xs.addEventListener('click', ()=> window.location.assign('kontakt.html'));
+logo.addEventListener('click', () => window.location.assign('index.html'));
+op1.addEventListener('click', () => window.location.assign('oferta.html'));
+op2.addEventListener('click', () => window.location.assign('lokalizacja.html'));
+op3.addEventListener('click', () => window.location.assign('kontakt.html'));
+op1xs.addEventListener('click', () => window.location.assign('oferta.html'));
+op2xs.addEventListener('click', () => window.location.assign('lokalizacja.html'));
+op3xs.addEventListener('click', () => window.location.assign('kontakt.html'));
 
 //COOKIES
 // Skrypt wygenerowano za darmo z uzyciem: https://skrypt-cookies.pl  
