@@ -15,9 +15,10 @@ section {
     padding: 1.5rem;
     width: 100%;
 }
- img {
+
+img {
     position: center;
- }
+}
 
 .oferta-column h3 {
     line-height: 1.6;
@@ -29,11 +30,13 @@ section {
     border: solid 1px white;
     object-fit: cover;
     opacity:90%;
+    background-color: #ebebeb;
 }
 
 .photo:hover {
     opacity:100%;
 }
+
 #phone-number {
     font-weight: bold;
     font-size: 1.8rem;
