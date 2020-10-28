@@ -4,7 +4,6 @@ areYouView();
 
 function introAnimations() {
     const tl = gsap.timeline({defaults: {ease: 'power1.out'} } );
-
     tl.to('.text', {y: '0%', duration: 1, stagger: 1});
     tl.from('#passion', {duration: 0.6, color:'white'});
     tl.to('.intro-slider', {x:'-100%', duration: 1, delay: 0.5});
@@ -38,7 +37,7 @@ function areYouView() {
         const timeAfter12h = intTimeEntrance + TWELVE_HOURS_IN_MILLISEC;
 
         $('.intro').css('display', 'none');
-        if (TIME_NOW > timeAfter12h) {
+        if(TIME_NOW > timeAfter12h) {
             localStorage.removeItem('view');
             areYouView();
         };
@@ -118,7 +117,7 @@ switch (DAY_OF_WEEK) {
 
 //OPTIONS LISTENERS
 
-const logo = document.querySelector('#logo');
+const logo = document.querySelector('#logo')
 const op1 = document.querySelector('#option-1');
 const op2 = document.querySelector('#option-2');
 const op3 = document.querySelector('#option-3');
