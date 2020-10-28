@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html lang="pl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!--font-->
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"> 
-    <link href="https://fonts.googleapis.com/css2?family=Jockey+One&display=swap" rel="stylesheet"> 
-    <!--style-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="kontakt.css">
-    <title>JM Service</title>
-    <meta name="description" content="Warsztat samochodowy / auto serwis / mechanik. Gronów k. Świebodzina (lubuskie). Problem z samochodem? Umów się na wizytę już dziś! ">
-	<meta name="keywords" content="warsztat samochodowy, auto serwis, mechanik, świebodzin, lubuskie, gronów, car serwis, diesel naprawa, silnik diesel, problem z silnikiem">
-    <meta name="author" content="Patrycja Hańdziuk">
-    <!--[if lt IE 9]>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-	<![endif]-->
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!--font-->
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Jockey+One&display=swap" rel="stylesheet">     
+        <!--style-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/lokalizacja.css">
+        <title>JM Service</title>
+        <meta name="description" content="Warsztat samochodowy / auto serwis / mechanik. Gronów k. Świebodzina (lubuskie). Problem z samochodem? Umów się na wizytę już dziś! ">
+        <meta name="keywords" content="warsztat samochodowy, auto serwis, mechanik, świebodzin, lubuskie, gronów, car serwis, diesel naprawa, silnik diesel, problem z silnikiem">
+        <meta name="author" content="Patrycja Hańdziuk">
+
+        <!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <![endif]-->
+    </head>
 <body>
     <main>
         <header>
@@ -50,10 +51,10 @@
                                 <a class="nav-link" href="oferta.html" >OFERTA</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="lokalizacja.html" >LOKALIZACJA</a>
+                                <a class="nav-link active" >LOKALIZACJA</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active">KONTAKT</a>
+                                <a class="nav-link" href="kontakt.html">KONTAKT</a>
                             </li>
                         </ul>
                     </div>
@@ -61,42 +62,18 @@
             </nav>
             
         </header>
-<!---------------------------------first-section-kontakt----------------------------------------------------------------------->
-        <section id="contact">
-            <div class="container"> 
-                <div class="row justify-content-center">
-                    <div class="row col-12 col-md-7 pt-5 pb-md-5">
-                        <div id="contact-container" class="w-100 row">
-                            <h3 class="col-12">
-                                Dane firmy
-                            </h3>
-                            <div id="firm-data" class="col-12"> <br>
-                                <p>
-                                    <b>JM SERVICE Jan Mroziński</b>
-                                    <br>
-                                    <br>
-                                    Gronów 12 <br>
-                                    66-220 Gronów (lubuskie) <br><br>
-                                    tel.: (+48) 602 812 042 <br>
-                                    jm-service@wp.pl<br>
-                                    NIP: 927-19-24-583<br>
-                                    regon: 081166080<br>
-                                </p>
-                            </div>
+<!---------------------------------first-section-lokalizacja----------------------------------------------------------------------->
+        <section id="lokalizacja">
+            <div class="container">
+                    <div class="row ml-md-3 ml-1 mr-md-5 mr-3">
+                        <div id="g-maps" class="pt-5 d-flex justify-content-center col-12 pl-0 pr-0">
+                                <iframe id="g-maps-iframe" class="col-12 pl-0 pr-0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2439.6561952292805!2d15.30276938728076!3d52.30409434199177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47065ba93b24b4e1%3A0x55e4a31082cb6e74!2sJM%20SERVICE%20Warsztat%20Samochodowy%20Auto%20Serwis%20Jan%20Mrozi%C5%84ski!5e0!3m2!1spl!2spl!4v1602416053915!5m2!1spl!2spl" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                                <br>
+                        </div>
+                        <div id="g-maps-frame" class="col-12 mb-5">
+                            <p id="g-maps-address" class="pt-2 pb-2 mb-0"> Gronów 12, 66-220 Gronów (lubuskie)</p>
                         </div>
                     </div>
-                    <div class="row col-12 col-md-5 pt-md-5 pb-5 pl-md-4">
-                        <div id="hours-container" class="row w-100 justify-content-center pl-lg-5 pr-lg-5">
-                            <h3 id="open-hours-contact" class="pb-3"> Godziny otwarcia</h3>
-                            <div class="open-hours col-12 d1 pt-2">Poniedziałek: 9-17</div>
-                            <div class="open-hours col-12 d2 pt-2">Wtorek: 9-17</div>
-                            <div class="open-hours col-12 d3 pt-2">Środa: 9-17</div>
-                            <div class="open-hours col-12 d4 pt-2">Czwartek: 9-17</div>
-                            <div class="open-hours col-12 d5 pt-2">Piątek: 9-17</div>
-                            <div class="open-hours col-12 d6 pt-2">Sobota: 9-14</div>
-                            <div class="open-hours col-12 d0 pt-2">Niedziela: zamknięte</div>
-                    </div>
-                </div>
             </div>
         </section>
 <!------------------- Footer ----------------------------------------->
@@ -124,15 +101,15 @@
                         <div class="col-md-4 mb-md-0 mb-3">
                             <h5 class="text-uppercase font-weight-bold">media społecznościowe</h5>
                             <p>
-                                <a target=”_blank” href="https://g.page/warsztat-samochodowy-gronow?share"><img class="mr-2 mt-2 social-media" src="img/google-maps.png" width="50px" height="50px"></a> 
-                                <a target=”_blank” href="https://facebook.com"><img class="ml-1 mr-1 mt-2 social-media" src="img/facebook.png" width="50px" height="50px"></a> 
-                                <a target=”_blank” href="https://instagram.com"><img class="ml-2 mt-2 social-media" src="img/instagram.png" width="53px" height="53px"></a> 
+                                <a target=”_blank” href="https://g.page/warsztat-samochodowy-gronow?share"><img class="mr-2 mt-2 social-media" src="/img/google-maps.png" width="50px" height="50px"></a> 
+                                <a target=”_blank” href="https://facebook.com"><img class="ml-1 mr-1 mt-2 social-media" src="/img/facebook.png" width="50px" height="50px"></a> 
+                                <a target=”_blank” href="https://instagram.com"><img class="ml-2 mt-2 social-media" src="/img/instagram.png" width="53px" height="53px"></a> 
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
-<!----------------------- Copyright ------------------------------------>
+        <!----------------------- Copyright ------------------------------------>
             <div id="footer-2">
                 <div class="footer-copyright text-center py-3 pt-3">© 2020 Copyright:
                 <a id="copyright" target="_blank" href="https://www.instagram.com/fizjopatka/?hl=pl"> Patrycja Hańdziuk</a>
@@ -145,6 +122,6 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous"></script>
-    <script src="app.js"></script>
+    <script src="/script/app.js"></script>
 </body>
 </html>

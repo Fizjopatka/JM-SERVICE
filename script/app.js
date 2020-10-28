@@ -4,6 +4,7 @@ areYouView();
 
 function introAnimations() {
     const tl = gsap.timeline({defaults: {ease: 'power1.out'} } );
+
     tl.to('.text', {y: '0%', duration: 1, stagger: 1});
     tl.from('#passion', {duration: 0.6, color:'white'});
     tl.to('.intro-slider', {x:'-100%', duration: 1, delay: 0.5});
@@ -37,7 +38,7 @@ function areYouView() {
         const timeAfter12h = intTimeEntrance + TWELVE_HOURS_IN_MILLISEC;
 
         $('.intro').css('display', 'none');
-        if(TIME_NOW > timeAfter12h) {
+        if (TIME_NOW > timeAfter12h) {
             localStorage.removeItem('view');
             areYouView();
         };
@@ -56,7 +57,7 @@ $('.d'+ DAY_OF_WEEK).css('background-color', 'rgba(206, 29, 29, 0.6)');
 
 const STILL_CLOSE_INFO = 'Jeszcze zamknięte. Zapraszamy dziś od 9.';
 const ALREADY_CLOSE_INFO = 'Już zamknięte. Zapraszamy jutro od 9.';
-const OPEN_INFO = 'Otwarte. Zapraszamy do warsztatu, lub do kontaktu telefonicznego.';
+const OPEN_INFO = 'Otwarte. Zapraszamy do warsztatu lub kontaktu telefonicznego.';
 const ALREADY_CLOSE_SATURDAY_INFO = 'Już zamknięte. Zapraszamy w poniedziałek od 9.';
 const SUNDAY_INFO = 'Zamknięte. Zapraszamy jutro od 9.';
 
@@ -117,7 +118,7 @@ switch (DAY_OF_WEEK) {
 
 //OPTIONS LISTENERS
 
-const logo = document.querySelector('#logo')
+const logo = document.querySelector('#logo');
 const op1 = document.querySelector('#option-1');
 const op2 = document.querySelector('#option-2');
 const op3 = document.querySelector('#option-3');
