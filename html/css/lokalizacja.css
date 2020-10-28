@@ -1,23 +1,19 @@
 section {
     font-family: 'Jockey One', sans-serif;
-}
-
-#lokalizacja {
     background-image: url(img/footer_lodyas.png);
 }
 
-#g-maps-iframe {
+.g-maps-iframe {
     background: #ebebeb;
 }
 
-#g-maps-frame {
+.g-maps-frame {
     background: #ebebeb;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to top, #fff, #ebebeb);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to top, #fff,#ebebeb); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-#g-maps-address {
+.g-maps-address {
     font-size: 1.8rem;
     text-align: center;
-    
 }

@@ -13,7 +13,7 @@ body {
 .container-fluid {
     margin-left:0;
 }
-#logo-container {
+.logo-container {
     padding-top: 3vh;
     font-family: 'Bebas Neue', cursive;
     background: #323435;  /* fallback for old browsers */
@@ -25,11 +25,11 @@ body {
     padding-right: 4vw;
 }
 
-#logo {
+.logo {
     white-space: nowrap;
 }
 
-#logo-www {
+.logo-www {
     margin-left:13rem;
     color:rgb(206, 29, 29);
     white-space: nowrap;
@@ -53,12 +53,12 @@ h3 {
     font-size: 1.3rem;
     letter-spacing: 1px;
 }
-#fast-contact {
+.fast-contact {
     color: white;
     text-align: right;
 }
 
-#fast-contact a {
+.fast-contact a {
     color: white;
     text-decoration-color: rgb(206, 29, 29);
 }
@@ -88,6 +88,7 @@ h3 {
     text-decoration: underline;
     text-decoration-color: rgb(206, 29, 29);
 }
+
 .active:hover {
     text-decoration: underline;
     text-decoration-color: rgb(206, 29, 29);
@@ -96,22 +97,18 @@ h3 {
     cursor: default;
     transition: 100s;
 }
-#black-line {
-    width:100%;
-    background-color: rgb(27, 27, 27);
-    height: 0.05rem;
-    margin-top:0.6rem;
-}
-#nav-button {
+
+.nav-button {
     text-align: center;
     width: 100%;
     font-size: 3rem;
     height:2.5rem;
     margin-bottom: 0.8rem;
 }
+
 /*FIRST SECTION */
 
-#slide  {
+.slide  {
     margin-left:auto;
     margin-right:auto;
     background-image: url(img/bg-img.png);
@@ -138,7 +135,7 @@ h3 {
     box-shadow: 10px 14px 20px 0px rgba(0,0,0,0.75);
 }
 
-#open-hours-txt {
+.open-hours-txt {
     text-align: center;
     font-size: 1.4rem;
 }
@@ -155,10 +152,6 @@ h3 {
 .open-hours span {
     font-size: 1.4rem;
     letter-spacing: 0px;
-}
-
-#mon {
-    background-color: rgba(206, 29, 29, 0.603)
 }
 
 /*FIRST SECTION - GODZINY OTWARCIA - XS*/
@@ -338,7 +331,7 @@ h3 {
 }
 
 /*FOOTER*/
-#footer {
+.footer {
     background: #fff;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to left, #fff, #d6d6d6);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to left, #fff, #d6d6d6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -366,15 +359,16 @@ h5 {
 .footer-copyright {
     color:white;
 }
-#copyright {
+.copyright {
     color: white;
 }
 
-#copyright:hover {
+.copyright:hover {
+    color: white;
     text-decoration-color: rgb(206, 29, 29);
 }
 
-#footer-2 {
+.footer-2 {
     background: #232526;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to left, #323435, #191b1b);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to left, #323435, #191b1b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -424,6 +418,6 @@ h5 {
     display: inline-block;
 }
 
-#passion {
+.passion {
     color: rgb(206, 29, 29);
 }

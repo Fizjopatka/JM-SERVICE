@@ -1,9 +1,6 @@
 /* SECTION */
 section {
     font-family: 'Jockey One', sans-serif;
-}
-
-#oferta {
     background-image: url(img/footer_lodyas.png);
 }
 
@@ -37,14 +34,14 @@ img {
     opacity:100%;
 }
 
-#phone-number {
+.phone-number {
     font-weight: bold;
     font-size: 1.8rem;
     text-align: center;
     cursor: pointer;
 }
 
-#phone-number:hover {
+.phone-number:hover {
     text-decoration: underline;
     text-decoration-color: rgb(206, 29, 29);
 }
