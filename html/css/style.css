@@ -114,7 +114,7 @@ h3 {
 #slide  {
     margin-left:auto;
     margin-right:auto;
-    background-image: url(/img/bg-img.png);
+    background-image: url(img/bg-img.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
