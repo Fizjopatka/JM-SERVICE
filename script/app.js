@@ -57,7 +57,7 @@ $('.d'+ DAY_OF_WEEK).css('background-color', 'rgba(206, 29, 29, 0.6)');
 
 const STILL_CLOSE_INFO = 'Jeszcze zamknięte. Zapraszamy dziś od 9.';
 const ALREADY_CLOSE_INFO = 'Już zamknięte. Zapraszamy jutro od 9.';
-const OPEN_INFO = 'Otwarte. Zapraszamy do warsztatu, lub do kontaktu telefonicznego.';
+const OPEN_INFO = 'Otwarte. Zapraszamy do warsztatu lub kontaktu telefonicznego.';
 const ALREADY_CLOSE_SATURDAY_INFO = 'Już zamknięte. Zapraszamy w poniedziałek od 9.';
 const SUNDAY_INFO = 'Zamknięte. Zapraszamy jutro od 9.';
 
