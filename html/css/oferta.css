@@ -5,10 +5,9 @@ section {
 }
 
 .oferta-column {
-    background: #ebebeb;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to top, #fff, #ebebeb);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to top, #fff,#ebebeb); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+    background: var(--offerwhite);  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, var(--white), var(--offerwhite));  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, var(--white), var(--offerwhite)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     padding: 1.5rem;
     width: 100%;
 }
@@ -24,10 +23,10 @@ img {
 }
 
 .photo {
-    border: solid 1px white;
+    border: solid 1px var(--white);
     object-fit: cover;
     opacity:90%;
-    background-color: #ebebeb;
+    background-color: var(--offerwhite);
 }
 
 .photo:hover {
@@ -43,5 +42,5 @@ img {
 
 .phone-number:hover {
     text-decoration: underline;
-    text-decoration-color: rgb(206, 29, 29);
+    text-decoration-color: var(--red);
 }
