@@ -28,6 +28,7 @@ $('.d'+ dayOfWeek).css('background-color', 'rgba(206, 29, 29, 0.6)');
 //FUNCTIONS
 function introAnimations() {
     const tl = gsap.timeline({defaults: {ease: 'power1.out'} } );
+    
     tl.to('.text', {y: '0%', duration: 1, stagger: 1});
     tl.from('#passion', {duration: 0.6, color:'white'});
     tl.to('.intro-slider', {x:'-100%', duration: 1, delay: 0.5});
@@ -69,8 +70,7 @@ function setInfoAboutDay(dayOfWeek, hourNow){
     const OPEN_INFO = 'Otwarte. Zapraszamy do warsztatu lub kontaktu telefonicznego.';
     const ALREADY_CLOSE_SATURDAY_INFO = 'Już zamknięte. Zapraszamy w poniedziałek od 9.';
     const SUNDAY_INFO = 'Zamknięte. Zapraszamy jutro od 9.';
-    console.log(dayOfWeek)
-    console.log(hourNow)
+
     if (dayOfWeek > 0 || dayOfWeek < 6){
         if (hourNow < 9) {
             $(HOURS_CONTAINER_XS).attr(TITLE, STILL_CLOSE_INFO);
