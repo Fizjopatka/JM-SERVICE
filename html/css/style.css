@@ -103,7 +103,7 @@ h3 {
     text-decoration: underline;
     text-decoration-color: var(--red);
     transition: none;
-    background-color:var(--white);
+    background-color: var(--white);
     cursor: default;
     transition: 100s;
 }
@@ -121,7 +121,7 @@ button:focus {
 }
 
 /*FIRST SECTION */
-.slide  {
+.slide {
     margin-left: auto;
     margin-right: auto;
     background-image: url(img/bg-img.png);
@@ -137,9 +137,8 @@ button:focus {
 .hours-container {
     transform: translateY(40%);
     background-color: var(--white90);
-    opacity:85%;
-    margin-right: auto;
-    margin-left: auto;
+    opacity: 85%;
+    margin: 0 auto;
     padding: 1rem;
     display: none;
     -webkit-box-shadow: 10px 14px 20px 0px var(--black75);
@@ -153,12 +152,12 @@ button:focus {
 }
 
 .open-hours {
-    float:left;
+    float: left;
     text-align: center;
     font-size: 1.1rem;
     width: 7rem;
     letter-spacing: 1px;
-    padding-top:0.3rem;
+    padding-top: 0.3rem;
 }
 
 .open-hours span {
@@ -169,7 +168,7 @@ button:focus {
 /*FIRST SECTION - GODZINY OTWARCIA - XS*/
 .slide-col {
     text-align: center;
-    transform:translateY(30%);
+    transform: translateY(30%);
 }
 
 .slide-col a {
@@ -180,7 +179,6 @@ button:focus {
 
 .hours-container-xs {
     display: flex;
-
     transform:translateY(35%);
     background-color: var(--white90);
     opacity:85%;
@@ -432,12 +430,8 @@ h5 {
 
 /*MEDIA < 390px*/
 @media only screen and (max-width: 390px) {
-    .gear {
-        display: none;
-    }
-    .map {
-        display: none;
-    }
+    .gear,
+    .map,
     .phone {
         display: none;
     }

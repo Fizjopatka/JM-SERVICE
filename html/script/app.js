@@ -1,14 +1,19 @@
 //CONST
-const today= new Date();
-const dayOfWeek = today.getDay();
-const hourNow = today.getHours();
-const timeEntrance = Date.now();
 const ANIM1 = 'anim1';
 const HOURS = 'hours';
 const SLIDERS = 'sliders';
 const HOURS_CONTAINER = '.hours-container';
 const HOURS_CONTAINER_XS = '.hours-container-xs';
 const TITLE = 'title';
+const CLICK = 'click';
+const INDEX = 'index.html';
+const OFFER = 'oferta.html';
+const LOCATION = 'lokalizacja.html';
+const CONTACT = 'kontakt.html';
+const today= new Date();
+const dayOfWeek = today.getDay();
+const hourNow = today.getHours();
+const timeEntrance = Date.now();
 const logo = document.querySelector('#logo')
 const op1 = document.querySelector('#option-1');
 const op2 = document.querySelector('#option-2');
@@ -16,11 +21,6 @@ const op3 = document.querySelector('#option-3');
 const op1xs = document.querySelector('#optionxs-1');
 const op2xs = document.querySelector('#optionxs-2');
 const op3xs = document.querySelector('#optionxs-3');
-const CLICK = 'click';
-const INDEX = 'index.html';
-const OFFER = 'oferta.html';
-const LOCATION = 'lokalizacja.html';
-const CONTACT = 'kontakt.html';
 
 //OPTIONS LISTENERS
 logo.addEventListener(CLICK, () => window.location.assign(INDEX));
@@ -36,7 +36,7 @@ $('.d'+ dayOfWeek).css('background-color', 'rgba(206, 29, 29, 0.6)');
 
 //FUNCTIONS
 function introAnimations() {
-    const tl = gsap.timeline({defaults: {ease: 'power1.out'} } );
+    const tl = gsap.timeline({defaults: {ease: 'power1.out'}});
     
     tl.to('.text', {y: '0%', duration: 1, stagger: 1});
     tl.from('#passion', {duration: 0.6, color:'white'});
@@ -113,17 +113,17 @@ setInfoAboutDay(dayOfWeek, hourNow);
 
 //COOKIES
 function WHCreateCookie(name, value, days) {
-    var date = new Date();
+    const date = new Date();
     date.setTime(date.getTime() + (days*24*60*60*1000));
-    var expires = "; expires=" + date.toGMTString();
+    const expires = "; expires=" + date.toGMTString();
 	document.cookie = name+"="+value+expires+"; path=/";
 };
 
 function WHReadCookie(name) {
-	var nameEQ = name + "=";
-	var ca = document.cookie.split(';');
-	for(var i=0; i < ca.length; i++) {
-		var c = ca[i];
+	const nameEQ = name + "=";
+	const ca = document.cookie.split(';');
+	for(let i=0; i < ca.length; i++) {
+		const c = ca[i];
 		while (c.charAt(0) == ' ') c = c.substring(1, c.length);
 		if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
 	};
@@ -134,9 +134,9 @@ window.onload = WHCheckCookies;
 
 function WHCheckCookies() {
     if(WHReadCookie('cookies_accepted') != 'T') {
-        var message_container = document.createElement('div');
+        const message_container = document.createElement('div');
         message_container.id = 'cookies-message-container';
-        var html_code = '<div id="cookies-message" style="padding: 14px 0px; font-size: 1rem; color: var(--white); line-height: 22px; text-align: center; position: fixed; bottom: 0px; background: -webkit-linear-gradient(to left, var(--charcoal), var(--darkgrey)); background: linear-gradient(to left, var(--charcoal),var(--darkgrey)); width: 100%; z-index: 999;">Ta strona używa ciasteczek (cookies), dzięki którym nasz serwis może działać lepiej. <a class="ml-1 mr-1" style="color: var(--white); text-decoration-color: var(--red)" href="https://skrypt-cookies.pl/czym-sa-ciasteczka" target="_blank"> Dowiedz się więcej</a><a href="javascript:WHCloseCookiesWindow();" id="accept-cookies-checkbox" name="accept-cookies" style="background-color: var(--red80); padding: 2px 10px; letter-spacing: 1px; color: var(--white); border-radius: 2px; -moz-border-radius: 2px; -webkit-border-radius: 2px; display: inline-block; margin-left: 10px; text-decoration: none; cursor: pointer; transition-timing-function: ease-in-out; transition: 0.5s;" onmouseover="cookieHoverOn()" onmouseout="cookieHoverOut()">Rozumiem</a></div>';
+        const html_code = '<div id="cookies-message" style="padding: 14px 0px; font-size: 1rem; color: var(--white); line-height: 22px; text-align: center; position: fixed; bottom: 0px; background: -webkit-linear-gradient(to left, var(--charcoal), var(--darkgrey)); background: linear-gradient(to left, var(--charcoal),var(--darkgrey)); width: 100%; z-index: 999;">Ta strona używa ciasteczek (cookies), dzięki którym nasz serwis może działać lepiej. <a class="ml-1 mr-1" style="color: var(--white); text-decoration-color: var(--red)" href="https://skrypt-cookies.pl/czym-sa-ciasteczka" target="_blank"> Dowiedz się więcej</a><a href="javascript:WHCloseCookiesWindow();" id="accept-cookies-checkbox" name="accept-cookies" style="background-color: var(--red80); padding: 2px 10px; letter-spacing: 1px; color: var(--white); border-radius: 2px; -moz-border-radius: 2px; -webkit-border-radius: 2px; display: inline-block; margin-left: 10px; text-decoration: none; cursor: pointer; transition-timing-function: ease-in-out; transition: 0.5s;" onmouseover="cookieHoverOn()" onmouseout="cookieHoverOut()">Rozumiem</a></div>';
         message_container.innerHTML = html_code;
         document.body.appendChild(message_container);
     };
