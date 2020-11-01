@@ -130,6 +130,8 @@ function WHReadCookie(name) {
 	return null;
 };
 
+window.onload = WHCheckCookies;
+
 function WHCheckCookies() {
     if(WHReadCookie('cookies_accepted') != 'T') {
         var message_container = document.createElement('div');
@@ -153,4 +155,3 @@ function WHCloseCookiesWindow() {
     document.getElementById('cookies-message-container').removeChild(document.getElementById('cookies-message'));
 };
 
-window.onload = WHCheckCookies;
