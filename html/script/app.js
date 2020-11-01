@@ -22,6 +22,15 @@ const OFFER = 'oferta.html';
 const LOCATION = 'lokalizacja.html';
 const CONTACT = 'kontakt.html';
 
+//OPTIONS LISTENERS
+logo.addEventListener(CLICK, () => window.location.assign(INDEX));
+op1.addEventListener(CLICK, () => window.location.assign(OFFER));
+op2.addEventListener(CLICK, () => window.location.assign(LOCATION));
+op3.addEventListener(CLICK, () => window.location.assign(CONTACT));
+op1xs.addEventListener(CLICK, () => window.location.assign(OFFER));
+op2xs.addEventListener(CLICK, () => window.location.assign(LOCATION));
+op3xs.addEventListener(CLICK, () => window.location.assign(CONTACT));
+
 //WHAT TODAY IS DAY
 $('.d'+ dayOfWeek).css('background-color', 'rgba(206, 29, 29, 0.6)');
 
@@ -31,8 +40,8 @@ function introAnimations() {
     
     tl.to('.text', {y: '0%', duration: 1, stagger: 1});
     tl.from('#passion', {duration: 0.6, color:'white'});
-    tl.to('.intro-slider', {x:'-100%', duration: 1, delay: 0.5});
-    tl.to('.intro', {x: '-100%', duration: 1, delay: -1});
+    tl.to('.intro-slider', {x:'-110%', duration: 1, delay: 0.5});
+    tl.to('.intro', {x: '-110%', duration: 1, delay: -1});
     tl.fromTo('#logo-container', {opacity: 0}, {opacity: 1, duration: 1}, ANIM1);
     tl.fromTo('section', {opacity: 0.2}, {opacity: 1, duration: 1}, ANIM1);
     tl.fromTo('nav', {opacity: 0}, {opacity: 1, duration: 0.8, delay: 0.5}, ANIM1);
@@ -102,15 +111,46 @@ function setInfoAboutDay(dayOfWeek, hourNow){
 areYouView();
 setInfoAboutDay(dayOfWeek, hourNow);
 
-//OPTIONS LISTENERS
-logo.addEventListener(CLICK, () => window.location.assign(INDEX));
-op1.addEventListener(CLICK, () => window.location.assign(OFFER));
-op2.addEventListener(CLICK, () => window.location.assign(LOCATION));
-op3.addEventListener(CLICK, () => window.location.assign(CONTACT));
-op1xs.addEventListener(CLICK, () => window.location.assign(OFFER));
-op2xs.addEventListener(CLICK, () => window.location.assign(LOCATION));
-op3xs.addEventListener(CLICK, () => window.location.assign(CONTACT));
-
 //COOKIES
-// Skrypt wygenerowano za darmo z uzyciem: https://skrypt-cookies.pl  
-function hovered(){document.getElementById('hcks').style.background='#df2e2e';}function unhovered(){document.getElementById('hcks').style.background='#ce1d1d';}function hidecks(){document.getElementById('cookie').style.display='none';setCookie('ck_5960dbf535fa5cbc','y',30);}function setCookie(name,value,days){var expires='';if(days){var date=new Date();date.setTime(date.getTime()+(days*24*60*60*1000));expires=';expires='+date.toUTCString();}document.cookie=name+'='+(value||'')+expires+';path=/';}function getCookie(name){var nameEQ=name+'=';var ca=document.cookie.split(';');for(var i=0;i<ca.length;i++){var c=ca[i];while(c.charAt(0)==' ')c=c.substring(1,c.length);if(c.indexOf(nameEQ)==0)return c.substring(nameEQ.length,c.length);}return null;}if(window.addEventListener){window.addEventListener('load',skr_ckz)}else{window.attachEvent('onload',skr_ckz)}function skr_ckz(){let x=getCookie('ck_5960dbf535fa5cbc');if(!x){let c=document.createElement('aside');let hc=document.createElement('span');c.setAttribute('id','cookie');c.style.zIndex=3000;hc.setAttribute('id','hcks');document.body.appendChild(c);c.style.background='#323435';c.style.color='#fafafa';hc.style.background='#ce1d1d';hc.style.color='#000000';c.innerHTML='<span id=\'cinfo\' style=\'flex: 1 1 auto; margin-top: 2px;\'>Informacja: Niniejszy serwis wykorzystuje do prawidłowego działania pliki cookies [&nbsp;<a href=\'https://skrypt-cookies.pl/czym-sa-ciasteczka\' target=\'_blank\' style=\'text-decoration:underline;color:#fafafa;\'>Więcej informacji</a>&nbsp;]</span>';hc.innerHTML='Rozumiem';c.style.left='0px';c.style.right='0px';c.style.bottom='0px';c.style.top='auto';c.style.maxWidth='100%';hc.style.padding='12px 30px';hc.style.cursor='pointer';hc.style.display='flex';hc.style.letterSpacing='1.5px';hc.style.borderRadius='.3rem';hc.style.alignItems='center';hc.style.marginLeft='15px';hc.addEventListener('click',hidecks,false);hc.addEventListener('mouseenter',hovered,false);hc.addEventListener('mouseleave',unhovered,false);c.style.position='fixed';c.style.padding='20px';c.style.fontSize='17px';c.style.display='flex';c.appendChild(hc);}}
+function WHCreateCookie(name, value, days) {
+    var date = new Date();
+    date.setTime(date.getTime() + (days*24*60*60*1000));
+    var expires = "; expires=" + date.toGMTString();
+	document.cookie = name+"="+value+expires+"; path=/";
+};
+
+function WHReadCookie(name) {
+	var nameEQ = name + "=";
+	var ca = document.cookie.split(';');
+	for(var i=0; i < ca.length; i++) {
+		var c = ca[i];
+		while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+		if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+	};
+	return null;
+};
+
+function WHCheckCookies() {
+    if(WHReadCookie('cookies_accepted') != 'T') {
+        var message_container = document.createElement('div');
+        message_container.id = 'cookies-message-container';
+        var html_code = '<div id="cookies-message" style="padding: 14px 0px; font-size: 1rem; color: var(--white); line-height: 22px; text-align: center; position: fixed; bottom: 0px; background: -webkit-linear-gradient(to left, var(--charcoal), var(--darkgrey)); background: linear-gradient(to left, var(--charcoal),var(--darkgrey)); width: 100%; z-index: 999;">Ta strona używa ciasteczek (cookies), dzięki którym nasz serwis może działać lepiej. <a class="ml-1 mr-1" style="color: var(--white); text-decoration-color: var(--red)" href="https://skrypt-cookies.pl/czym-sa-ciasteczka" target="_blank"> Dowiedz się więcej</a><a href="javascript:WHCloseCookiesWindow();" id="accept-cookies-checkbox" name="accept-cookies" style="background-color: var(--red80); padding: 2px 10px; letter-spacing: 1px; color: var(--white); border-radius: 2px; -moz-border-radius: 2px; -webkit-border-radius: 2px; display: inline-block; margin-left: 10px; text-decoration: none; cursor: pointer; transition-timing-function: ease-in-out; transition: 0.5s;" onmouseover="cookieHoverOn()" onmouseout="cookieHoverOut()">Rozumiem</a></div>';
+        message_container.innerHTML = html_code;
+        document.body.appendChild(message_container);
+    };
+};
+
+function cookieHoverOn() {
+    $('#accept-cookies-checkbox').css('background-color', 'var(--red)');
+};
+
+function cookieHoverOut() {
+    $('#accept-cookies-checkbox').css('background-color', 'var(--red80)');
+};
+
+function WHCloseCookiesWindow() {
+    WHCreateCookie('cookies_accepted', 'T', 365);
+    document.getElementById('cookies-message-container').removeChild(document.getElementById('cookies-message'));
+};
+
+window.onload = WHCheckCookies;
