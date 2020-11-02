@@ -154,4 +154,3 @@ function WHCloseCookiesWindow() {
     WHCreateCookie('cookies_accepted', 'T', 365);
     document.getElementById('cookies-message-container').removeChild(document.getElementById('cookies-message'));
 };
-
