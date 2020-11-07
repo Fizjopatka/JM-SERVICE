@@ -1,5 +1,6 @@
 ### PROTECT FILES ###
 <FilesMatch "\.(htaccess|htpasswd|ini|fla|psd|log|sh)$">
+Options FollowSymLinks
 Order Allow,Deny
 Deny from all
 </FilesMatch>
